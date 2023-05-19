@@ -104,25 +104,25 @@ const HeroSection = () => {
     >
       <motion.span
         variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl text-transparent"
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl text-transparent max-sm:text-2xl"
       >
         Hello
       </motion.span>
       <motion.span
         variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent"
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
       >
         I&apos;m Krishna
       </motion.span>{" "}
       <motion.h2
         variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent"
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
       >
         Full-Stack Developer
       </motion.h2>
       <motion.h2
         variants={itemVarient}
-        className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-5xl text-transparent"
+        className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-5xl text-transparent max-sm:text-4xl"
       >
         Expert in Front-End Dev{" "}
       </motion.h2>{" "}
