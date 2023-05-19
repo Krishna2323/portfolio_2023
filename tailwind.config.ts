@@ -19,6 +19,9 @@ export default {
         "black-gradient":
           "linear-gradient(to right top, #3d3d3d, #343434, #2b2b2b, #222222, #1a1a1a, #181818, #161616, #141414, #181818, #1c1c1c, #212121, #252525);",
       },
+      rotate: {
+        rotateY: "rotateY(180deg)",
+      },
     },
   },
   plugins: [],
