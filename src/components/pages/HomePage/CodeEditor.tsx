@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import * as HiIcons from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -20,13 +20,16 @@ const variants = {
 const CodeEditor = () => {
   const [animateEditor, setAnimateEditor] = useState(false);
 
-  const [ref, inView] = useInView({ threshold: 0.6 });
-  const imagesUrl = [
-    "/code-editor/code-editor-ss-1.png",
-    "/code-editor/code-editor-ss-2.png",
-    "/code-editor/code-editor-ss-3.png",
-    "/code-editor/code-editor-ss-4.png",
-  ];
+  const [ref, inView] = useInView({ threshold: 0.45 });
+  const imagesUrl = useMemo(
+    () => [
+      "/code-editor/code-editor-ss-1.png",
+      "/code-editor/code-editor-ss-2.png",
+      "/code-editor/code-editor-ss-3.png",
+      "/code-editor/code-editor-ss-4.png",
+    ],
+    []
+  );
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -48,10 +51,21 @@ const CodeEditor = () => {
     }
   }, [inView]);
 
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      if (currentImageIndex === imagesUrl.length - 1) {
+        setCurrentImageIndex(0);
+      } else setCurrentImageIndex((prev) => prev + 1);
+    }, 4000);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, [currentImageIndex, imagesUrl]);
+
   return (
     <div className="mt-28 flex w-full flex-col items-center">
       <div ref={ref} className="w-full rounded-2xl py-8">
-        <h2 className="mb-10 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-3xl text-transparent">
+        <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent">
           The Code Editor That Defines My Skills
         </h2>
         <motion.div
@@ -64,13 +78,13 @@ const CodeEditor = () => {
           {imagesUrl.map((imageURL, i) => (
             <div
               key={imageURL}
-              className={`absolute top-0 h-full w-full rounded-xl${
+              className={`absolute top-0 h-full w-full rounded-xl ${
                 currentImageIndex === i
                   ? "scale-100  opacity-100"
-                  : "scale-50 opacity-0"
+                  : "scale-90 opacity-0"
               }`}
               style={{
-                transition: "all .5s",
+                transition: "all .65s",
               }}
             >
               <Image
@@ -117,9 +131,23 @@ const CodeEditor = () => {
               Next.js, TypeScript, TailwindCSS, Zustand, GitHub API&apos;s
             </p>
           </div>
-          <button className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff] transition hover:scale-105">
-            Description
-          </button>
+          <div className="flex gap-3">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1 }}
+              className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+            >
+              Description
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1 }}
+              className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+            >
+              Video Demo
+            </motion.button>
+          </div>
         </div>
       </div>
     </div>

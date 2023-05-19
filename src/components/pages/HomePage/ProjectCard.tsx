@@ -24,7 +24,7 @@ const ProjectCard: React.FC<Props> = (props) => {
   return (
     <motion.div
       variants={variants}
-      className="project-card perspective-10 h-[21rem] w-[clamp(max(25vw,25vh),25rem,max(30vw,30vh))] bg-transparent"
+      className="project-card perspective-10 min-h-[21rem] w-[clamp(max(25vw,25vh),25rem,max(30vw,30vh))] bg-transparent"
     >
       <div
         className="project-card-inner relative h-full w-full text-center hover:rotate-rotateY"
@@ -45,9 +45,9 @@ const ProjectCard: React.FC<Props> = (props) => {
                 alt="Project-Screenshot"
                 width={200}
                 height={200}
-                className="block w-full object-fill"
+                className="block w-full object-fill shadow-sm"
               />
-              <span className="absolute right-[5%] top-full -translate-y-[50%] rounded-3xl bg-gradient-to-br from-blue-secondary to-blue-primary p-[5px_1.2rem] text-lg text-[#fff] ">
+              <span className="absolute right-[5%] top-full -translate-y-[50%] rounded-3xl bg-gradient-to-br from-black-secondary to-black-primary p-[5px_1.2rem] text-lg text-[#fff] ">
                 {project.title}
               </span>
             </div>
@@ -76,30 +76,23 @@ const ProjectCard: React.FC<Props> = (props) => {
           </div>
         </div>
         <div
-          className="project-card-back  absolute h-full w-full rounded-lg shadow-primary"
+          className="project-card-back  absolute w-full rounded-lg shadow-primary"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <div className="project-card-back__inner ">
+          <div className="project-card-back__inner flex h-[21rem]  flex-col p-5 px-7">
             <div className="project-details">
-              <span className="heading">Project Description:</span>
-              <p className="detail">{project.projectDescription}</p>
+              <span className="text-lg  font-medium">Project Description:</span>
+              <p className="detail mt-6">{project.projectDescription}</p>
             </div>
-            {/* <div className="project-concepts">
-              <span className="heading">Concepts Covered:</span>
-              <ul className="concepts">
-                {project.conceptsCovered.map((e, i) => (
-                  <li key={i}>{e}</li>
-                ))}
-              </ul>
-            </div> */}
-            <div className="project-links">
-              {/* <button className="btn-secondary">More Details</button> */}
+            <div className="project-links mt-auto">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1 }}
-                className="btn-secondary mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+                className="btn-secondary mx-auto my-2 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
               >
-                View Project
+                <a href={project.link} target="_blank">
+                  View Project
+                </a>
               </motion.button>
             </div>
           </div>

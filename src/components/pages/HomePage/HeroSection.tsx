@@ -100,10 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      onAnimationEnd={() => {
-        console.log("EDN");
-      }}
-      className="relative flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pb-24 pt-12 text-center font-normal text-transparent"
+      className="relative flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pb-24 pt-12 text-center font-normal text-transparent max-lg:w-full"
     >
       <motion.span
         variants={itemVarient}
@@ -186,28 +183,29 @@ const HeroSection = () => {
       {/* PROJECT IMAGES */}
       <motion.div
         variants={itemVarient2}
-        className="bg-red relative mt-8 h-[min(30vh,13vw)] w-[min(60vh,25vw)]"
+        transition={{ duration: 0.5 }}
+        className="bg-red relative mt-8 h-[max(20vh,11vw)] w-[max(38vh,20vw)] max-md:mb-52 max-sm:h-[min(25vh,30vw)] max-sm:w-[70%]"
       >
         <Image
           src={"/hero-section/Trillo.png"}
           width={200}
           height={400}
           alt="project screenshot"
-          className="absolute -left-[52%] top-0 h-full w-full rounded-lg shadow-xl transition-all hover:z-10 hover:scale-110"
-        />
-        <Image
-          src={"/hero-section/Forkify.png"}
-          width={200}
-          height={400}
-          alt="project screenshot"
-          className="absolute -right-[52%] top-0 h-full w-full rounded-lg shadow-xl transition-all hover:z-10 hover:scale-110"
+          className="absolute -left-[52%] top-0 h-full w-full rounded-lg shadow-xl transition-all hover:z-20 hover:scale-110 max-md:-left-[25%]"
         />
         <Image
           src={"/hero-section/Bankist.png"}
           width={200}
           height={400}
           alt="project screenshot"
-          className="absolute left-[50%] top-[40%] h-full w-full translate-x-[-50%] rounded-lg shadow-xl transition-all hover:z-10 hover:scale-110"
+          className="absolute left-[50%] top-[40%] z-10 h-full w-full translate-x-[-50%] rounded-lg shadow-xl transition-all hover:z-10 hover:scale-110 max-md:top-[80%]"
+        />
+        <Image
+          src={"/hero-section/Forkify.png"}
+          width={200}
+          height={400}
+          alt="project screenshot"
+          className="absolute -right-[52%] top-0 h-full w-full rounded-lg shadow-xl transition-all hover:z-20 hover:scale-110 max-md:-right-[25%] max-md:top-[160%]"
         />
       </motion.div>
     </motion.div>
