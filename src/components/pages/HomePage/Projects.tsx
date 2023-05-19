@@ -53,7 +53,7 @@ const Projects = () => {
 
   return (
     <div className="mt-24 flex w-full flex-col items-center p-8" ref={ref}>
-      <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent">
+      <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent max-sm:text-3xl">
         Projects
       </h2>
       <motion.div

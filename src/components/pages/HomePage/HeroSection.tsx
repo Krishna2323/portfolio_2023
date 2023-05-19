@@ -100,7 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-8 text-center font-normal text-transparent max-lg:w-full max-sm:mb-[25vw]"
+      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-56 max-lg:w-full max-sm:mb-[25vw]"
     >
       <motion.span
         variants={itemVarient}
@@ -142,10 +142,14 @@ const HeroSection = () => {
       {/* TECH ICONS  */}
       <motion.div
         variants={iconsVarientLeft}
-        className="absolute -left-full top-28 flex  w-full justify-end gap-12 pr-16"
+        className="absolute -left-full top-28 flex w-full !transform justify-end gap-12 pr-16 max-lg:-left-0 max-lg:-top-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pr-0"
+        style={{ transform: "unset" }}
       >
         {techIconsLeft.map((icons, i) => (
-          <div className="flex flex-col justify-evenly  gap-20" key={i}>
+          <div
+            className="flex flex-col justify-evenly gap-20  max-lg:gap-8"
+            key={i}
+          >
             {icons.map((icon) => (
               <motion.div
                 whileHover={{ scale: 1.2 }}
@@ -153,7 +157,10 @@ const HeroSection = () => {
                 className="flex h-fit  items-center justify-center rounded-full bg-bg-primary  p-[3px] shadow-primary"
               >
                 <div className="p-1">
-                  <icon.icon fill={icon.color} size={36} />
+                  <icon.icon
+                    fill={icon.color}
+                    className="h-8 w-8 max-sm:h-6 max-sm:w-6"
+                  />
                 </div>
               </motion.div>
             ))}
@@ -162,10 +169,14 @@ const HeroSection = () => {
       </motion.div>
       <motion.div
         variants={iconsVarientRight}
-        className="absolute -right-full top-28 flex  w-full justify-start gap-12 pl-16"
+        style={{ transform: "unset" }}
+        className="absolute -right-full top-28 flex w-full !transform justify-start gap-12 pl-16 max-lg:-top-0 max-lg:right-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pl-0"
       >
         {techIconsRight.map((icons, i) => (
-          <div key={i} className="flex flex-col justify-evenly gap-20">
+          <div
+            key={i}
+            className="flex flex-col justify-evenly gap-20 max-lg:gap-8"
+          >
             {icons.map((icon) => (
               <motion.div
                 key={icon.color}
@@ -173,7 +184,10 @@ const HeroSection = () => {
                 className="flex h-fit  items-center justify-center rounded-full bg-bg-primary  p-[3px] shadow-primary"
               >
                 <div className="p-1">
-                  <icon.icon fill={icon.color} size={36} />
+                  <icon.icon
+                    fill={icon.color}
+                    className="h-8 w-8 max-sm:h-6 max-sm:w-6"
+                  />
                 </div>
               </motion.div>
             ))}
