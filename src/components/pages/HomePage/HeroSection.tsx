@@ -100,7 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="relative flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pb-24 pt-12 text-center font-normal text-transparent max-lg:w-full"
+      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-8 text-center font-normal text-transparent max-lg:w-full max-sm:mb-[25vw]"
     >
       <motion.span
         variants={itemVarient}
@@ -128,7 +128,7 @@ const HeroSection = () => {
       </motion.h2>{" "}
       <motion.p
         variants={itemVarient}
-        className="text-md bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-transparent"
+        className="text-md my-6 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-transparent"
       >
         Results-oriented full stack developer with a demonstrated track record
         of building robust and scalable applications over the past 3-4 years. A

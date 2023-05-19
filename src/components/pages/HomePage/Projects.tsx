@@ -8,7 +8,7 @@ const Projects = () => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-14 flex w-full flex-col items-center p-8">
+    <div className="mt-24 flex w-full flex-col items-center p-8" ref={ref}>
       <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent">
         Projects
       </h2>
@@ -60,7 +60,6 @@ const Projects = () => {
         variants={variants}
         initial={false}
         animate={startAnimation ? "open" : "closed"}
-        ref={ref}
         transition={{ duration: 0.5 }}
         className="flex flex-wrap justify-evenly gap-5 gap-y-16"
       >

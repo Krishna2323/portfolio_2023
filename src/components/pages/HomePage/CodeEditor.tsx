@@ -63,7 +63,7 @@ const CodeEditor = () => {
   }, [currentImageIndex, imagesUrl]);
 
   return (
-    <div className="mt-28 flex w-full flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <div ref={ref} className="w-full rounded-2xl py-8">
         <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent">
           The Code Editor That Defines My Skills

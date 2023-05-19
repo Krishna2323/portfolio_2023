@@ -47,7 +47,7 @@ const ProjectCard: React.FC<Props> = (props) => {
                 height={200}
                 className="block w-full object-fill shadow-sm"
               />
-              <span className="absolute right-[5%] top-full -translate-y-[50%] rounded-3xl bg-gradient-to-br from-black-secondary to-black-primary p-[5px_1.2rem] text-lg text-[#fff] ">
+              <span className="absolute right-[5%] top-full -translate-y-[50%] rounded-3xl bg-gradient-to-br from-black-secondary to-black-primary p-[2px_1.2rem] text-lg text-[#fff] ">
                 {project.title}
               </span>
             </div>
@@ -70,7 +70,11 @@ const ProjectCard: React.FC<Props> = (props) => {
                 <span className="flex items-center gap-2 text-left text-sm">
                   Responsive:
                 </span>
-                {project.responsive ? <BsCheck2All /> : <IoCloseOutline />}
+                {project.responsive ? (
+                  <BsCheck2All size={18} />
+                ) : (
+                  <IoCloseOutline size={18} />
+                )}
               </span>
             </div>
           </div>
@@ -81,7 +85,9 @@ const ProjectCard: React.FC<Props> = (props) => {
         >
           <div className="project-card-back__inner flex h-[21rem]  flex-col p-5 px-7">
             <div className="project-details">
-              <span className="text-lg  font-medium">Project Description:</span>
+              <span className="bg-gradient-to-br  from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
+                Project Description:
+              </span>
               <p className="detail mt-6">{project.projectDescription}</p>
             </div>
             <div className="project-links mt-auto">
