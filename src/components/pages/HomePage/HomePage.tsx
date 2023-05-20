@@ -12,7 +12,7 @@ const HomePage = () => {
       <CodeEditor />
       <Projects />
       <Resume />
-      <Experience />
+      {/* <Experience /> */}
     </div>
   );
 };

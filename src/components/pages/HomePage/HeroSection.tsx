@@ -100,7 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-6 max-lg:w-full max-lg:pt-56 max-md:gap-3 max-sm:mb-[25vw]"
+      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-4 max-lg:w-full max-lg:pt-56 max-md:gap-3 max-sm:mb-[25vw]"
     >
       <motion.span
         variants={itemVarient}
