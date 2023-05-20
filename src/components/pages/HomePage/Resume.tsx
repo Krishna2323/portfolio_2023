@@ -35,9 +35,9 @@ export const Resume = () => {
         Responsive Resume
       </h2>
       <div className="w-full overflow-hidden rounded-2xl shadow-primary">
-        <div className="flex w-full items-stretch overflow-hidden rounded-2xl">
-          <div className="w-[25%] overflow-hidden text-ellipsis whitespace-nowrap border-r border-blue-secondary">
-            <div className="flex flex-col  border-b border-blue-secondary px-4 py-5">
+        <div className="flex w-full flex-row items-stretch overflow-hidden rounded-2xl max-lg:flex-col">
+          <div className="w-[25%] flex-wrap overflow-hidden border-r border-blue-secondary max-lg:flex max-lg:w-full max-lg:border-r-0">
+            <div className="flex flex-col gap-4 border-b border-blue-secondary px-4 py-5 max-lg:w-[30%] max-lg:border-r max-sm:w-full max-sm:border-r-0">
               <h2 className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl font-medium text-transparent">
                 Krishna Gupta
               </h2>
@@ -45,29 +45,32 @@ export const Resume = () => {
                 Full-Stack Developer
               </span>
             </div>
-            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm">
+            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-[70%] max-sm:w-full">
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Personal Info
               </h3>
-              <p className="flex w-full flex-col ">
-                <strong className="font-medium">Phone: </strong>+91-9140938115
-              </p>
-              <p className="flex w-full flex-col">
-                <strong className="font-medium">Email: </strong>
-                belivethatkg@gmail.com
-              </p>
-              <p className="flex w-full flex-col ">
-                <strong className="font-medium">LinkedIn: </strong>
-                https://www.linkedin.com/in/krishnagupta23
-              </p>
-              <p className="flex w-full flex-col">
-                <strong className="font-medium">Twitter: </strong>
-                https://twitter.com/web_devloving{" "}
-              </p>
-              <p className="flex w-full flex-col ">
-                <strong className="font-medium">Github: </strong>
-                https://github.com/Krishna2323
-              </p>
+              <div className="flex flex-col gap-1.5 max-lg:flex-row max-lg:flex-wrap max-lg:gap-4">
+                <p className="flex w-full flex-col max-lg:w-fit max-lg:flex-row">
+                  <strong className="font-semibold">Phone: </strong>
+                  +91-9140938115
+                </p>
+                <p className="flex w-full flex-col max-lg:w-fit max-lg:flex-row">
+                  <strong className="font-semibold">Email: </strong>
+                  belivethatkg@gmail.com
+                </p>
+                <p className="flex w-full flex-col max-lg:w-fit max-lg:flex-row ">
+                  <strong className="font-semibold">LinkedIn: </strong>
+                  https://www.linkedin.com/in/krishnagupta23
+                </p>
+                <p className="flex w-full flex-col max-lg:w-fit max-lg:flex-row">
+                  <strong className="font-semibold">Twitter: </strong>
+                  https://twitter.com/web_devloving{" "}
+                </p>
+                <p className="flex w-full flex-col max-lg:w-fit max-lg:flex-row ">
+                  <strong className="font-semibold">Github: </strong>
+                  https://github.com/Krishna2323
+                </p>
+              </div>
             </div>
             <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm">
               {" "}
@@ -86,7 +89,7 @@ export const Resume = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm">
+            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-full">
               {" "}
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Soft Skills
@@ -102,7 +105,7 @@ export const Resume = () => {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-1.5 px-4 py-5 text-sm">
+            <div className="flex flex-col gap-1.5 border-blue-secondary px-4 py-5 text-sm max-lg:w-full  max-lg:border-b">
               {" "}
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Education
@@ -126,7 +129,7 @@ export const Resume = () => {
               </div>{" "}
             </div>
           </div>
-          <div className="flex w-[80%] grow flex-col">
+          <div className="flex w-[80%] grow flex-col max-lg:w-full">
             <div className="felx w-full flex-col gap-1.5 border-b border-blue-secondary px-4 py-5">
               <h3 className="mb-2 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Career Objective
@@ -143,11 +146,11 @@ export const Resume = () => {
                 overcome technical challenges.
               </p>
             </div>
-            <div className="flex w-full grow flex-col gap-1.5 px-4 py-5">
+            <div className="flex w-full grow flex-col gap-1.5 px-4 py-5 ">
               <h3 className="mb-4 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Experience
               </h3>
-              <div className="flex h-full flex-col justify-between">
+              <div className="flex h-full flex-col justify-between gap-5 max-lg:gap-8">
                 <p className="flex w-full flex-col">
                   <strong className="text-base font-semibold">
                     Dimension - Front-End Developer
