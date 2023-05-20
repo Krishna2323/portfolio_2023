@@ -1,14 +1,6 @@
-import { DiPhotoshop, DiReact } from "react-icons/di";
-import {
-  IoLogoJavascript,
-  IoLogoNodejs,
-  IoLogoCss3,
-  IoLogoSass,
-} from "react-icons/io";
+import { IoLogoJavascript, IoLogoNodejs, IoLogoSass } from "react-icons/io";
 import {
   SiAmazonaws,
-  SiCytoscapedotjs,
-  SiFigma,
   SiKubernetes,
   SiMongodb,
   SiPostgresql,
@@ -16,7 +8,6 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
-  SiCanva,
 } from "react-icons/si";
 import { GrDocker } from "react-icons/gr";
 import type { IconType } from "react-icons";

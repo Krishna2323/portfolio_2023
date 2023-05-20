@@ -52,7 +52,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-14 flex w-full flex-col items-center p-8" ref={ref}>
+    <div className="mt-14 flex w-full flex-col items-center py-8" ref={ref}>
       <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent max-sm:text-3xl">
         Projects
       </h2>
@@ -61,7 +61,7 @@ const Projects = () => {
         initial={false}
         animate={startAnimation ? "open" : "closed"}
         transition={{ duration: 0.5 }}
-        className="flex flex-wrap justify-evenly gap-5 gap-y-16"
+        className="grid w-full grid-cols-[repeat(3,1fr)] justify-center gap-20 max-xl:grid-cols-[repeat(2,1fr)] max-xl:gap-14 max-sm:grid-cols-[repeat(1,1fr)]"
       >
         {projects.map((project) => (
           <ProjectCard

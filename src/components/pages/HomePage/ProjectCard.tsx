@@ -24,7 +24,7 @@ const ProjectCard: React.FC<Props> = (props) => {
   return (
     <motion.div
       variants={variants}
-      className="project-card perspective-10 min-h-[21rem] w-[clamp(max(25vw,25vh),25rem,max(30vw,30vh))] bg-transparent"
+      className="project-card perspective-10 min-h-[21rem] w-full max-w-sm bg-transparent max-sm:max-w-sm"
     >
       <div
         className="project-card-inner relative h-full w-full text-center hover:rotate-rotateY"
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<Props> = (props) => {
                 {project.title}
               </span>
             </div>
-            <div className="project-card-front__tech-stack my-auto flex flex-col gap-5 px-5 ">
+            <div className="project-card-front__tech-stack my-auto flex flex-col gap-5 px-5 py-4 ">
               <span className="flex items-center gap-2 text-left text-sm">
                 <span className="flex items-center gap-2 text-left text-sm">
                   {/* <ImStack />: */}
@@ -88,7 +88,9 @@ const ProjectCard: React.FC<Props> = (props) => {
               <span className="bg-gradient-to-br  from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Project Description:
               </span>
-              <p className="detail mt-6">{project.projectDescription}</p>
+              <p className="detail mt-3 text-sm">
+                {project.projectDescription}
+              </p>
             </div>
             <div className="project-links mt-auto">
               <motion.button
