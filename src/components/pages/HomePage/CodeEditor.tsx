@@ -11,9 +11,9 @@ const variants = {
     opacity: 1,
   },
   closed: {
-    y: 400,
+    y: 0,
     scale: 0.8,
-    opacity: 0.8,
+    opacity: 0,
   },
 };
 

@@ -100,7 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-56 max-lg:w-full max-sm:mb-[25vw]"
+      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-56 max-lg:w-full max-md:gap-3 max-sm:mb-[25vw]"
     >
       <motion.span
         variants={itemVarient}
@@ -124,7 +124,7 @@ const HeroSection = () => {
         variants={itemVarient}
         className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-5xl text-transparent max-sm:text-4xl"
       >
-        Expert in Front-End Dev{" "}
+        Front-End Dev Expert
       </motion.h2>{" "}
       <motion.p
         variants={itemVarient}
