@@ -100,7 +100,7 @@ const HeroSection = () => {
       variants={variants}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-56 max-lg:w-full max-md:gap-3 max-sm:mb-[25vw]"
+      className="relative mb-52 flex w-1/2 flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-6 max-lg:w-full max-lg:pt-56 max-md:gap-3 max-sm:mb-[25vw]"
     >
       <motion.span
         variants={itemVarient}
@@ -142,8 +142,7 @@ const HeroSection = () => {
       {/* TECH ICONS  */}
       <motion.div
         variants={iconsVarientLeft}
-        className="absolute -left-full top-28 flex w-full !transform justify-end gap-12 pr-16 max-lg:-left-0 max-lg:-top-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pr-0"
-        style={{ transform: "unset" }}
+        className="absolute -left-full top-28 flex w-full justify-end gap-12 pr-16 max-lg:-left-0 max-lg:-top-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pr-0"
       >
         {techIconsLeft.map((icons, i) => (
           <div
@@ -169,8 +168,7 @@ const HeroSection = () => {
       </motion.div>
       <motion.div
         variants={iconsVarientRight}
-        style={{ transform: "unset" }}
-        className="absolute -right-full top-28 flex w-full !transform justify-start gap-12 pl-16 max-lg:-top-0 max-lg:right-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pl-0"
+        className="absolute -right-full top-28 flex w-full justify-start gap-12 pl-16 max-lg:-top-0 max-lg:right-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pl-0"
       >
         {techIconsRight.map((icons, i) => (
           <div

@@ -36,7 +36,7 @@ export const techIconsLeft: {
       color: "#2875C3",
       size: "3rem",
     },
-    { color: "#61DBFB", icon: DiReact },
+    { color: "#764ABC", icon: SiRedux },
   ],
   [
     { color: "#000000", icon: SiNextdotjs },
