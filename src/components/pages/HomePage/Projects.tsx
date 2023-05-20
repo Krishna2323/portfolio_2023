@@ -61,7 +61,7 @@ const Projects = () => {
         initial={false}
         animate={startAnimation ? "open" : "closed"}
         transition={{ duration: 0.5 }}
-        className="grid w-full grid-cols-[repeat(3,1fr)] justify-center gap-20 max-xl:grid-cols-[repeat(2,1fr)] max-xl:gap-14 max-sm:grid-cols-[repeat(1,1fr)]"
+        className="grid w-full grid-cols-[repeat(3,1fr)] justify-items-center gap-20 max-xl:grid-cols-[repeat(2,1fr)] max-xl:gap-14 max-sm:grid-cols-[repeat(1,1fr)]"
       >
         {projects.map((project) => (
           <ProjectCard
