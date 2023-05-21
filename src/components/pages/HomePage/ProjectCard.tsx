@@ -24,7 +24,7 @@ const ProjectCard: React.FC<Props> = (props) => {
   return (
     <motion.div
       variants={variants}
-      className="project-card perspective-10 min-h-[21rem] w-full max-w-sm bg-transparent max-sm:max-w-sm"
+      className="project-card perspective-10 min-h-[22rem] w-full max-w-[22rem] bg-transparent max-sm:max-w-[22rem]"
     >
       <div
         className="project-card-inner relative h-full w-full text-center hover:rotate-rotateY"

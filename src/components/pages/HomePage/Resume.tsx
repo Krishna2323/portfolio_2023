@@ -34,7 +34,7 @@ export const Resume = () => {
       <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent max-sm:text-3xl">
         Responsive Resume
       </h2>
-      <div className="w-full scale-90 overflow-hidden rounded-2xl shadow-primary max-lg:scale-95">
+      <div className="w-full overflow-hidden rounded-2xl shadow-primary">
         <div className="flex w-full flex-row items-stretch overflow-hidden rounded-2xl max-lg:flex-col">
           <div className="w-[25%] flex-wrap overflow-hidden border-r border-blue-secondary max-lg:flex max-lg:w-full max-lg:border-r-0">
             <div className="flex flex-col gap-4 border-b border-blue-secondary px-4 py-5 max-lg:w-[30%] max-lg:border-r max-sm:w-full max-sm:border-r-0">
