@@ -19,7 +19,7 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["img-c.udemycdn.com"],
+    domains: ["img-c.udemycdn.com", "img.icons8.com"],
   },
 };
 export default config;

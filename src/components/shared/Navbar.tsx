@@ -1,19 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+import GmailIcon from "~/icons/GmailIcon";
+import LinkedInIcon from "~/icons/LinkedInIcon";
+import TwitterIcon from "~/icons/TwitterIcon";
+import Image from "next/image";
 
 const links = [
   {
-    name: "LinkedIn",
+    icon: <LinkedInIcon />,
     link: "https://www.linkedin.com/in/krishnagupta23/",
   },
   {
-    name: "Twitter",
+    icon: <TwitterIcon />,
     link: "https://twitter.com/web_devloving",
   },
-  {
-    name: "GitHub",
-    link: "https://github.com/Krishna2323",
-  },
+  // {
+  //   name: "GitHub",
+  //   link: "https://github.com/Krishna2323",
+  // },
 ];
 
 const Navbar = () => {
@@ -23,24 +27,39 @@ const Navbar = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1 }}
-          className="btn-secondary mx-auto my-2 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-2  text-[#fff]"
+          className="btn-secondary flex h-10 w-10 items-center justify-center rounded-full p-2 text-[#fff]  shadow-primary"
         >
           <a href={"mailto: belivethatkg@gmail.com"} target="_blank">
-            E-mail
+            <GmailIcon />
           </a>
         </motion.button>
         {links.map((link) => (
           <motion.button
-            key={link.name}
+            key={link.link}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 1 }}
-            className="btn-secondary mx-auto my-2 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-2 text-[#fff]"
+            className="btn-secondary flex h-10 w-10 items-center justify-center rounded-full p-2 text-[#fff]  shadow-primary"
           >
             <a href={link.link} target="_blank">
-              {link.name}
+              {link.icon}
             </a>
           </motion.button>
         ))}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1 }}
+          className="btn-secondary flex h-10 w-10 items-center justify-center rounded-full p-2 text-[#fff]  shadow-primary"
+        >
+          <a href={"mailto: belivethatkg@gmail.com"} target="_blank">
+            <Image
+              src="https://img.icons8.com/3d-fluency/94/null/github.png"
+              alt="Github logo"
+              style={{ transform: "scale(1.4)" }}
+              width={32}
+              height={32}
+            ></Image>
+          </a>
+        </motion.button>
       </div>
       <span className="linear-wipe text-lg font-medium">3+ years</span>
     </nav>
