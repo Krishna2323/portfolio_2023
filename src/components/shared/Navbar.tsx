@@ -14,10 +14,6 @@ const links = [
     icon: <TwitterIcon />,
     link: "https://twitter.com/web_devloving",
   },
-  // {
-  //   name: "GitHub",
-  //   link: "https://github.com/Krishna2323",
-  // },
 ];
 
 const Navbar = () => {

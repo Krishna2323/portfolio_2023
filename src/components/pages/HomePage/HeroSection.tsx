@@ -191,7 +191,6 @@ const HeroSection = () => {
         collaborative environments where I can contribute my problem-solving
         skills to overcome technical challenges.{" "}
       </motion.p>{" "}
-      {/* TECH ICONS  */}
       {/* PROJECT IMAGES */}
       <motion.div
         variants={itemVarient2}
