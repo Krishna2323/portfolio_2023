@@ -1,4 +1,5 @@
 import { type AppType } from "next/dist/shared/lib/utils";
+import Footer from "~/components/shared/Footer";
 import Navbar from "~/components/shared/Navbar";
 
 import "~/styles/globals.css";
@@ -9,6 +10,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <div className="mx-auto my-auto h-full overflow-y-auto overflow-x-hidden rounded-2xl shadow-primary ">
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </div>
   );

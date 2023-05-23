@@ -18,5 +18,8 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["img-c.udemycdn.com"],
+  },
 };
 export default config;

@@ -4,8 +4,20 @@ import Bankist from "../../public/hero-section/Bankist.png";
 import Trillo from "../../public/hero-section/Trillo.png";
 import Natours from "../../public/hero-section/Natours-CSS.png";
 import Nexter from "../../public/hero-section/Nexter.png";
+import Portfolio from "../../public/hero-section/Portfolio.png";
+import { type StaticImageData } from "next/image";
 
 export const projects = [
+  {
+    title: "Portfolio 2022",
+    techStack: ["React, ", "CSS/SCSS, ", "Redux"],
+    timeSpent: "2 Week",
+    responsive: true,
+    link: "https://krishna2323.github.io/",
+    image: Portfolio,
+    projectDescription:
+      "This is my portfolio which I had build in Dec 2022. It also includes all my project and a responsive reusme. It has a feature where you can browse all my projects without changing the browser tab.",
+  },
   {
     title: "Omnifood",
     techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript "],
@@ -30,7 +42,7 @@ export const projects = [
   },
   {
     title: "Forkify",
-    techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript"],
+    techStack: ["HTML, ", "CSS/SCSS, ", "JavaScript, ", "API's"],
     timeSpent: "4 Week",
     responsive: false,
     link: "https://quiet-travesseiro-698e66.netlify.app/",
@@ -139,3 +151,14 @@ export const projects = [
     ],
   },
 ];
+
+export type IProject = {
+  title: string;
+  techStack: string[];
+  timeSpent: string;
+  responsive: boolean;
+  link: string;
+  image: StaticImageData | string;
+  description: string;
+  conceptsCovered?: undefined;
+};

@@ -4,6 +4,7 @@ import CodeEditor from "./CodeEditor";
 import Projects from "./Projects";
 import { Resume } from "./Resume";
 import Specs99 from "./Specs99";
+import Bootcamps from "./Bootcamps";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Specs99 />
       <Projects />
       <Resume />
+      <Bootcamps />
       {/* <Experience /> */}
     </div>
   );
