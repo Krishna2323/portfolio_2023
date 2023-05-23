@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import * as HiIcons from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Modal from "~/components/shared/Modal";
 
 const variants = {
   open: {
@@ -19,6 +20,8 @@ const variants = {
 
 const Specs99 = () => {
   const [animateEditor, setAnimateEditor] = useState(false);
+
+  const [descriptionModal, setDescriptionModal] = useState(false);
 
   const [ref, inView] = useInView({ threshold: 0.45 });
   const imagesUrl = useMemo(
@@ -141,6 +144,7 @@ const Specs99 = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 1 }}
               className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+              onClick={() => setDescriptionModal(true)}
             >
               Description
             </motion.button>
@@ -161,6 +165,9 @@ const Specs99 = () => {
           </div>
         </div>
       </div>
+      <Modal open={descriptionModal} setOpen={setDescriptionModal}>
+        <h1>Specs99</h1>
+      </Modal>
     </div>
   );
 };

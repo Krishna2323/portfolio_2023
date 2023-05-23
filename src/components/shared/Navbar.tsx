@@ -4,6 +4,7 @@ import GmailIcon from "~/icons/GmailIcon";
 import LinkedInIcon from "~/icons/LinkedInIcon";
 import TwitterIcon from "~/icons/TwitterIcon";
 import Image from "next/image";
+import Modal from "./Modal";
 
 const links = [
   {
@@ -57,7 +58,7 @@ const Navbar = () => {
           </a>
         </motion.button>
       </div>
-      <span className="linear-wipe text-lg font-medium">3+ years</span>
+      <span className="linear-wipe text-xl font-medium">3+ years</span>
     </nav>
   );
 };

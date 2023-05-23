@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState, Fragment } from "react";
 import * as HiIcons from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Modal from "~/components/shared/Modal";
 
 const variants = {
   open: {
@@ -44,6 +45,8 @@ const CodeEditor = () => {
       setCurrentImageIndex(0);
     } else setCurrentImageIndex((prev) => prev + 1);
   };
+
+  const [descriptionModal, setDescriptionModal] = useState(false);
 
   useEffect(() => {
     if (inView) {
@@ -137,6 +140,7 @@ const CodeEditor = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1 }}
                 className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+                onClick={() => setDescriptionModal((prev) => !prev)}
               >
                 Description
               </motion.button>
@@ -151,6 +155,9 @@ const CodeEditor = () => {
             </div>
           </div>
         </div>
+        <Modal open={descriptionModal} setOpen={setDescriptionModal}>
+          <h1>Code Editor</h1>
+        </Modal>
       </div>
     </>
   );

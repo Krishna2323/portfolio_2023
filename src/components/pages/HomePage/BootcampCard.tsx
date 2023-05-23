@@ -35,7 +35,7 @@ const BootcampCard: React.FC<Props> = (props) => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.5 }}
-      className="perspective-10 min-h-[32rem] w-full max-w-[22rem] bg-transparent max-sm:max-w-[22rem]"
+      className="perspective-10 min-h-[28rem] w-full max-w-[22rem] bg-transparent max-sm:max-w-[22rem]"
     >
       <div className="relative h-full w-full text-center">
         <div
@@ -55,14 +55,14 @@ const BootcampCard: React.FC<Props> = (props) => {
                 {bootcamp.title}
               </span>
             </div>
-            <div className="project-card-front__tech-stack my-auto grid grid-cols-[max-content_1fr] flex-col gap-x-8 gap-y-5 px-5 py-4 text-left text-sm max-md:px-2 ">
+            <div className="project-card-front__tech-stack my-auto grid grid-cols-[max-content_1fr] flex-col gap-x-8 gap-y-4 px-5 py-4 text-left text-sm max-md:px-2 ">
               {/* ///////////////////////// */}
               {/* <span className="grid items-start gap-2 text-left text-sm"> */}
               <span className="flex text-sm">Name:</span>
               {bootcamp.name}
               {/* </span> */}
               {/* <span className="grid items-center gap-2 text-left text-sm"> */}
-              <span className="flex text-sm">Course Length:</span>
+              <span className="flex text-sm">Length:</span>
               {bootcamp.courseLength} Hours
               {/* </span> */}
               {/* <span className="grid items-center gap-2 text-left text-sm"> */}
@@ -77,10 +77,10 @@ const BootcampCard: React.FC<Props> = (props) => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 1 }}
-              className="btn-secondary mx-auto my-1 mb-4  w-fit rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+              className="btn-secondary mx-auto my-1 mb-3  w-fit rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
             >
               <a href={bootcamp.link} target="_blank">
-                View Project
+                View Course
               </a>
             </motion.button>
           </div>
