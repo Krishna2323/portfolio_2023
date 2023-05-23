@@ -18,7 +18,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 mx-auto flex w-full items-center justify-between bg-bg-primary px-[min(4vh,4vh)] py-3 shadow-primary max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:px-[min(2vh,2vh)]">
+    <nav className="sticky top-0 z-50 mx-auto flex w-full items-center justify-between bg-bg-primary px-[min(4vh,4vh)] py-3 shadow-primary max-sm:px-[min(2vh,2vh)] max-[350px]:flex-col max-[350px]:items-center max-[350px]:justify-center">
       <div className="mt-auto flex gap-2.5 text-sm ">
         <motion.button
           whileHover={{ scale: 1.1 }}
