@@ -10,12 +10,12 @@ type Props = {
 
 const cardVariants: Variants = {
   offscreen: {
-    y: 300,
+    y: 100,
     rotate: -10,
     opacity: 0.4,
   },
   onscreen: {
-    y: 50,
+    y: 0,
     rotate: 0,
     opacity: 1,
     transition: {

@@ -225,7 +225,7 @@ export const Resume = () => {
               variants={cardVariantsRight}
               initial="offscreen"
               whileInView="onscreen"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="flex w-full grow flex-col gap-1.5 px-4 py-5 "
             >
               <h3 className="mb-4 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
