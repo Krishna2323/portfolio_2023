@@ -102,44 +102,6 @@ const HeroSection = () => {
       transition={{ duration: 0.5 }}
       className="relative mb-52 flex w-[55%] flex-col items-center justify-center gap-5 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text pt-12 text-center font-normal text-transparent max-lg:mt-4 max-lg:w-full max-lg:pt-56 max-md:gap-3 max-sm:mb-[25vw]"
     >
-      <motion.span
-        variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl text-transparent max-sm:text-2xl"
-      >
-        Hello
-      </motion.span>
-      <motion.span
-        variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
-      >
-        I&apos;m Krishna
-      </motion.span>{" "}
-      <motion.h2
-        variants={itemVarient}
-        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
-      >
-        Full-Stack Developer
-      </motion.h2>
-      <motion.h2
-        variants={itemVarient}
-        className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-5xl text-transparent max-sm:text-4xl"
-      >
-        Front-End Dev Expert
-      </motion.h2>{" "}
-      <motion.p
-        variants={itemVarient}
-        className="text-md my-6 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-transparent"
-      >
-        Results-oriented full stack developer with a demonstrated track record
-        of building robust and scalable applications over the past 3-4 years. A
-        former commerce student who embarked on a self-taught journey into the
-        world of full stack development, I bring a unique blend of analytical
-        thinking and creativity to my work. With a keen eye for detail and a
-        passion for delivering exceptional user experiences, I thrive in
-        collaborative environments where I can contribute my problem-solving
-        skills to overcome technical challenges.{" "}
-      </motion.p>{" "}
-      {/* TECH ICONS  */}
       <motion.div
         variants={iconsVarientLeft}
         className="absolute -left-full top-28 flex w-full justify-end gap-12 pr-16 max-lg:-left-0 max-lg:-top-0 max-lg:-translate-y-full max-lg:gap-8 max-lg:pr-0"
@@ -192,6 +154,44 @@ const HeroSection = () => {
           </div>
         ))}
       </motion.div>
+      <motion.span
+        variants={itemVarient}
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl text-transparent max-sm:text-2xl"
+      >
+        Hello
+      </motion.span>
+      <motion.span
+        variants={itemVarient}
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
+      >
+        I&apos;m Krishna
+      </motion.span>{" "}
+      <motion.h2
+        variants={itemVarient}
+        className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-4xl text-transparent max-sm:text-3xl"
+      >
+        Full-Stack Developer
+      </motion.h2>
+      <motion.h2
+        variants={itemVarient}
+        className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-5xl text-transparent max-sm:text-4xl"
+      >
+        Front-End Dev Expert
+      </motion.h2>{" "}
+      <motion.p
+        variants={itemVarient}
+        className="text-md my-6 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-transparent"
+      >
+        Results-oriented full stack developer with a demonstrated track record
+        of building robust and scalable applications over the past 3-4 years. A
+        former commerce student who embarked on a self-taught journey into the
+        world of full stack development, I bring a unique blend of analytical
+        thinking and creativity to my work. With a keen eye for detail and a
+        passion for delivering exceptional user experiences, I thrive in
+        collaborative environments where I can contribute my problem-solving
+        skills to overcome technical challenges.{" "}
+      </motion.p>{" "}
+      {/* TECH ICONS  */}
       {/* PROJECT IMAGES */}
       <motion.div
         variants={itemVarient2}
