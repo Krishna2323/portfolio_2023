@@ -87,3 +87,36 @@
     background-position: 0 0;
   }
 }
+
+.linear-wipe {
+  text-align: center;
+
+  background: linear-gradient(
+    to bottom right,
+    #74c0fc 20%,
+    #1864ab 40%,
+    #6b7278 60%,
+    #212529 80%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 10s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

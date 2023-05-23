@@ -14,7 +14,7 @@ const BootcampCard: React.FC<Props> = (props) => {
   return (
     <motion.div
       variants={variants}
-      className="project-card perspective-10 min-h-[24rem] w-full max-w-[22rem] bg-transparent max-sm:max-w-[22rem]"
+      className="project-card perspective-10 min-h-[26rem] w-full max-w-[22rem] bg-transparent max-sm:max-w-[22rem]"
     >
       <div
         className="project-card-inner relative h-full w-full text-center hover:rotate-rotateY"
@@ -41,29 +41,29 @@ const BootcampCard: React.FC<Props> = (props) => {
                 {bootcamp.title}
               </span>
             </div>
-            <div className="project-card-front__tech-stack my-auto flex flex-col gap-5 px-5 py-4 ">
+            <div className="project-card-front__tech-stack my-auto grid grid-cols-[max-content_1fr] flex-col gap-5 px-5 py-4 text-sm ">
               {/* ///////////////////////// */}
-              <span className="grid-[2fr_1fr] grid items-start gap-2 text-left text-sm">
-                <span className="flex text-sm">Name:</span>
-                {bootcamp.name}
-              </span>
-              <span className="grid-[2fr_1fr] grid items-center gap-2 text-left text-sm">
-                <span className="flex text-sm">Course Length:</span>
-                {bootcamp.courseLength} Hours
-              </span>
-              <span className="grid-[2fr_1fr] grid items-center gap-2 text-left text-sm">
-                <span className="flex text-sm">Time Spent:</span>
-                {bootcamp.timeSpent}
-              </span>
-              <span className="grid-[2fr_1fr] fdsa  grid items-center gap-2 text-left text-sm">
-                <span className="flex w-1/2  text-sm">Author:</span>
-                {bootcamp.author}
-              </span>
+              {/* <span className="grid items-start gap-2 text-left text-sm"> */}
+              <span className="flex text-sm">Name:</span>
+              {bootcamp.name}
+              {/* </span> */}
+              {/* <span className="grid items-center gap-2 text-left text-sm"> */}
+              <span className="flex text-sm">Course Length:</span>
+              {bootcamp.courseLength} Hours
+              {/* </span> */}
+              {/* <span className="grid items-center gap-2 text-left text-sm"> */}
+              <span className="flex text-sm">Time Spent:</span>
+              {bootcamp.timeSpent}
+              {/* </span> */}
+              {/* <span className="grid items-center gap-2 text-left text-sm"> */}
+              <span className="flex w-1/2  text-sm">Author:</span>
+              <span>{bootcamp.author}</span>
+              {/* </span> */}
             </div>
           </div>
         </div>
         <div
-          className="project-card-back  absolute w-full rounded-lg shadow-primary"
+          className="project-card-back absolute  h-full w-full rounded-lg shadow-primary"
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           <div className="project-card-back__inner flex h-[21rem]  flex-col p-5 px-7">
