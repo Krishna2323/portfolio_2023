@@ -20,7 +20,7 @@ const Projects = () => {
   const variants = {
     open: {
       transition: {
-        staggerChildren: 0.35,
+        staggerChildren: 0.5,
         delayChildren: 0.1,
       },
     },
@@ -37,6 +37,7 @@ const Projects = () => {
       y: 0,
       opacity: 1,
       scale: 1,
+      rotateY: 0,
       transition: {
         x: { stiffness: 1000, velocity: -100 },
       },
@@ -45,6 +46,7 @@ const Projects = () => {
       y: 200,
       opacity: 0,
       scale: 0.95,
+      rotateY: 180,
       transition: {
         x: { stiffness: 1000, velocity: -100 },
       },

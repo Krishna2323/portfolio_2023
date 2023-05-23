@@ -1,4 +1,6 @@
+import { type Variants } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 
 const techs = [
   "Data Structures & Algorithms",
@@ -28,6 +30,42 @@ const softSkils = [
   "Collaboration",
 ];
 
+const cardVariantsLeft: Variants = {
+  offscreen: {
+    x: -100,
+    rotate: -10,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    rotate: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
+const cardVariantsRight: Variants = {
+  offscreen: {
+    x: 100,
+    rotate: 10,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    rotate: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 export const Resume = () => {
   return (
     <div className="mt-14 flex w-full flex-col items-center py-8">
@@ -38,15 +76,27 @@ export const Resume = () => {
         <div className="relative flex w-full flex-row items-stretch overflow-hidden rounded-2xl  border-b border-blue-secondary max-lg:flex-col">
           <span className="absolute h-1.5 w-full bg-gradient-to-br from-blue-secondary to-blue-primary"></span>
           <div className="w-[25%] flex-wrap overflow-hidden border-r border-blue-secondary max-lg:flex max-lg:w-full max-lg:border-r-0">
-            <div className="flex flex-col gap-4 border-b border-blue-secondary px-4 py-5 max-lg:w-[30%] max-lg:border-r max-sm:w-full max-sm:border-r-0">
+            <motion.div
+              variants={cardVariantsLeft}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-4 border-b border-blue-secondary px-4 py-5 max-lg:w-[30%] max-lg:border-r max-sm:w-full max-sm:border-r-0"
+            >
               <h2 className="bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-3xl font-medium text-transparent">
                 Krishna Gupta
               </h2>
               <span className="bg-gradient-to-br from-blue-secondary to-blue-primary bg-clip-text text-2xl text-transparent">
                 Full-Stack Developer
               </span>
-            </div>
-            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-[70%] max-sm:w-full">
+            </motion.div>
+            <motion.div
+              variants={cardVariantsLeft}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-[70%] max-sm:w-full"
+            >
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Personal Info
               </h3>
@@ -72,8 +122,14 @@ export const Resume = () => {
                   https://github.com/Krishna2323
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm">
+            </motion.div>
+            <motion.div
+              variants={cardVariantsLeft}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm"
+            >
               {" "}
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Skills
@@ -88,9 +144,15 @@ export const Resume = () => {
                   </p>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-full">
+            <motion.div
+              variants={cardVariantsLeft}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-1.5 border-b border-blue-secondary px-4 py-5 text-sm max-lg:w-full"
+            >
               {" "}
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Soft Skills
@@ -105,8 +167,14 @@ export const Resume = () => {
                   </p>
                 ))}
               </div>
-            </div>
-            <div className="flex flex-col gap-1.5 border-blue-secondary px-4 py-5 text-sm max-lg:w-full  max-lg:border-b">
+            </motion.div>
+            <motion.div
+              variants={cardVariantsLeft}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex flex-col gap-1.5 border-blue-secondary px-4 py-5 text-sm max-lg:w-full  max-lg:border-b"
+            >
               {" "}
               <h3 className="mb-1 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Education
@@ -128,10 +196,16 @@ export const Resume = () => {
                   FreeCodeCamp
                 </p>
               </div>{" "}
-            </div>
+            </motion.div>
           </div>
           <div className="flex w-[80%] grow flex-col max-lg:w-full">
-            <div className="felx w-full flex-col gap-1.5 border-b border-blue-secondary px-4 py-5">
+            <motion.div
+              variants={cardVariantsRight}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="felx w-full flex-col gap-1.5 border-b border-blue-secondary px-4 py-5"
+            >
               <h3 className="mb-2 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Career Objective
               </h3>
@@ -146,13 +220,25 @@ export const Resume = () => {
                 environments where I can contribute my problem-solving skills to
                 overcome technical challenges.
               </p>
-            </div>
-            <div className="flex w-full grow flex-col gap-1.5 px-4 py-5 ">
+            </motion.div>
+            <motion.div
+              variants={cardVariantsRight}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.5 }}
+              className="flex w-full grow flex-col gap-1.5 px-4 py-5 "
+            >
               <h3 className="mb-4 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-xl font-medium text-transparent">
                 Experience
               </h3>
               <div className="flex h-full flex-col justify-between gap-5 max-lg:gap-8">
-                <p className="flex w-full flex-col">
+                <motion.p
+                  variants={cardVariantsRight}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex w-full flex-col"
+                >
                   <strong className="text-base font-semibold">
                     Dimension - Front-End Developer
                   </strong>
@@ -167,8 +253,14 @@ export const Resume = () => {
                   ever. It is the most complex project that I had worked on
                   using multiple complex library and Github REST and GraphQL
                   API&apos;s.
-                </p>
-                <p className="flex w-full flex-col">
+                </motion.p>
+                <motion.p
+                  variants={cardVariantsRight}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex w-full flex-col"
+                >
                   <strong className="text-base font-semibold">
                     Meshery - Front-End Developer
                   </strong>
@@ -183,8 +275,14 @@ export const Resume = () => {
                   role of site maintainer, later I was offered a full-time role
                   but I was not intrested in the project so I started with
                   Dimension.
-                </p>
-                <p className="flex w-full flex-col">
+                </motion.p>
+                <motion.p
+                  variants={cardVariantsRight}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex w-full flex-col"
+                >
                   <strong className="text-base font-semibold">
                     Data Structures & Algorithms
                   </strong>
@@ -197,8 +295,14 @@ export const Resume = () => {
                   me in efficiently store, retrieve, and manipulate data. It
                   also helps in organizing and structuring data in a way that
                   optimizes performance and reduces resource usage.
-                </p>
-                <p className="flex w-full flex-col">
+                </motion.p>
+                <motion.p
+                  variants={cardVariantsRight}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex w-full flex-col"
+                >
                   <strong className="text-base font-semibold">
                     Freelance, Bootcamps, Side Projects
                   </strong>
@@ -213,9 +317,9 @@ export const Resume = () => {
                   responsive design. I also have invested large part of my time
                   in learning Data Structures and Algorithms and practicing it,
                   I solved many problems on Hackerank & got my 5th star.
-                </p>
+                </motion.p>
               </div>{" "}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
