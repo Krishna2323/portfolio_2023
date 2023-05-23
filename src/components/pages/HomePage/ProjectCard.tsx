@@ -13,7 +13,7 @@ type Props = {
     link: string;
     image: StaticImageData;
     projectDescription: string;
-    conceptsCovered: string[];
+    conceptsCovered?: string[];
   };
   variants: Variants;
 };
