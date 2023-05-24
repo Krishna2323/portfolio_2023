@@ -18,8 +18,9 @@ const Modal: React.FC<Props> = (props) => {
     <>
       <motion.div
         animate={open ? "open" : "closed"}
+        initial="closed"
         transition={{
-          duration: 0.2,
+          duration: 0.25,
         }}
         variants={variants}
         onClick={() => setOpen(false)}
@@ -27,7 +28,7 @@ const Modal: React.FC<Props> = (props) => {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className="absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-2xl border-t-[4px] border-blue-secondary bg-bg-primary shadow-2xl"
+          className="absolute left-1/2 top-1/2 flex h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 flex-col items-center overflow-auto rounded-2xl border-t-[4px] border-blue-secondary bg-bg-primary px-10 py-8 shadow-2xl max-lg:h-[80%] max-lg:w-[80%] max-md:px-4 max-sm:h-[85%] max-sm:w-[85%]"
         >
           {props.children}
         </div>

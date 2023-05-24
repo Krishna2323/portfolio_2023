@@ -156,7 +156,72 @@ const CodeEditor = () => {
           </div>
         </div>
         <Modal open={descriptionModal} setOpen={setDescriptionModal}>
-          <h1>Code Editor</h1>
+          <h2 className="mb-8 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-2xl font-medium text-transparent">
+            Dimension Code Editor
+          </h2>
+          <div className="flex flex-col gap-8">
+            <p>
+              The Dimension Code Editor is a powerful web application built
+              using Next.js, TypeScript, Tailwind CSS, Zustand, and GitHub REST
+              and GraphQL APIs. It is an integral part of the Dimension project,
+              which aims to provide developers with a single platform for
+              managing domains, deployments, projects, and code, enhancing
+              productivity and user experience with numerous integrations.
+            </p>
+            <p>
+              The Dimension Code Editor allows users to import their GitHub
+              repositories, providing a seamless integration with their existing
+              codebase. Once imported, users can perform various operations on
+              their code directly from the app. Key features include:
+            </p>
+            <ol className="flex flex-col gap-6">
+              <li>
+                <strong>File Management:</strong> Users can edit, view, and
+                delete files within their GitHub repositories, all from the
+                Dimension Code Editor. Additionally, they can create new files,
+                enabling a comprehensive code editing experience.
+              </li>
+              <li>
+                <strong>Commit and Version Control:</strong> The app allows
+                users to commit changes made to files directly from the editor,
+                streamlining the development workflow. Users can view the commit
+                history for individual files, enabling them to track changes
+                made over time. The commit history can be filtered by author,
+                status checks, and dates. Furthermore, users can also access the
+                commit history for the entire repository, providing a holistic
+                overview of project evolution.
+              </li>
+              <li>
+                <strong>Commit Diff and Comparison:</strong> Similar to GitHub,
+                the Dimension Code Editor enables users to view the difference
+                between different versions of a file. This allows for easy
+                identification of changes made and aids in code review. Users
+                can compare versions, view line-by-line differences, and
+                understand the evolution of their code.
+              </li>
+              <li>
+                <strong>Support for Various File Types:</strong> The code editor
+                supports a wide range of file types, including images and PDFs,
+                providing versatility for managing different file formats within
+                the GitHub repositories.
+              </li>
+              <li>
+                <strong>Pull Request Filtering:</strong> Users can filter pull
+                requests within the Dimension Code Editor based on criteria such
+                as author, assignee, and status. This functionality enables
+                efficient tracking of pull requests and facilitates
+                collaboration among team members.
+              </li>
+            </ol>
+            <p>
+              The Dimension Code Editor offers a comprehensive suite of
+              features, allowing developers to seamlessly work with their GitHub
+              repositories, manage code versions, and streamline collaboration.
+              By combining the power of Next.js, TypeScript, Tailwind CSS,
+              Zustand, and GitHub APIs, it provides an intuitive and efficient
+              development environment within the broader Dimension platform.
+            </p>
+          </div>
         </Modal>
       </div>
     </>
