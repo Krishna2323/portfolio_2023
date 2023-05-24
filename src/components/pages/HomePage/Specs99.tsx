@@ -166,7 +166,87 @@ const Specs99 = () => {
         </div>
       </div>
       <Modal open={descriptionModal} setOpen={setDescriptionModal}>
-        <h1>Specs99</h1>
+        <h2 className="mb-8 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-2xl font-medium text-transparent">
+          Eyewear Store E-commerce Web App{" "}
+        </h2>
+        <div className="flex flex-col gap-8">
+          <p>
+            The Eyewear Store E-commerce Web App is a comprehensive online
+            platform built using React.js, CSS/SCSS, Redux, Node.js, Express.js,
+            MongoDB, AWS S3 bucket for images storage, and Stripe for secure
+            payment processing. This project serves as a dedicated e-commerce
+            solution for an eyewear store, providing users with a seamless
+            shopping experience and robust management capabilities.
+          </p>
+          <p>Key Features:</p>
+          <ol className="flex flex-col gap-6">
+            <li>
+              <strong>User Authentication:</strong> The web app offers a
+              user-friendly login/signup system, allowing users to create
+              accounts and securely authenticate themselves. This enables
+              personalized experiences and features tailored to individual
+              users.
+            </li>
+            <li>
+              <strong>Product Catalog:</strong> Users can browse and view all
+              available eyewear products. The web app provides powerful
+              filtering options, enabling users to search and filter products
+              based on criteria such as price, color, brand, eyewear type, and
+              size.
+            </li>
+            <li>
+              <strong>Cart Functionality:</strong> Users can add products to
+              their cart and easily manage quantities on both the cart page and
+              individual product pages. The cart provides a seamless checkout
+              process, ensuring a hassle-free purchasing experience.
+            </li>
+            <li>
+              <strong>Related Products:</strong> On specific product pages,
+              users can view related products, enhancing product discovery and
+              encouraging additional purchases.
+            </li>
+            <li>
+              <strong>User Account Management:</strong> Users have the ability
+              to change their password and email address, ensuring flexibility
+              and account security. Additionally, a &quot;Forgot Password&quot;
+              functionality allows users to reset their password if needed.
+            </li>
+            <li>
+              <strong>Address Management:</strong> After authentication, users
+              can add and manage their shipping addresses, streamlining the
+              checkout process for future purchases.{" "}
+            </li>
+            <li>
+              <strong>Payment Options:</strong> The web app supports two payment
+              methods: Cash on Delivery (COD) and debit/credit card payments via
+              Stripe. This ensures convenient and secure payment processing for
+              users.{" "}
+            </li>
+            <li>
+              <strong>Order Tracking:</strong> Once the payment is successfully
+              processed, users can track their orders and view order details,
+              providing transparency and peace of mind.{" "}
+            </li>
+            <li>
+              <strong>Admin Dashboard:</strong> The web app includes a
+              comprehensive user interface (UI) for managing products, users,
+              and orders. Admins can create, update, and delete products, manage
+              user accounts, and handle order processing efficiently.{" "}
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> The web app is fully
+              responsive, ensuring a seamless experience across various devices
+              and screen sizes.{" "}
+            </li>
+          </ol>
+          <p>
+            The Eyewear Store E-commerce Web App offers a feature-rich and
+            user-friendly platform for online eyewear shopping. With its robust
+            functionalities, secure payment processing, and intuitive admin
+            dashboard, the app provides a seamless shopping experience for users
+            while enabling efficient management of products, users, and orders.
+          </p>
+        </div>{" "}
       </Modal>
     </div>
   );
