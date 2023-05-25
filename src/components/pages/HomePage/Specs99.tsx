@@ -4,6 +4,7 @@ import * as HiIcons from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Modal from "~/components/shared/Modal";
+import * as IoIcons from "react-icons/io";
 
 const variants = {
   open: {

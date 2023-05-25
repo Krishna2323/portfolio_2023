@@ -4,6 +4,7 @@ import * as HiIcons from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Modal from "~/components/shared/Modal";
+import Link from "next/link";
 
 const variants = {
   open: {
@@ -148,9 +149,17 @@ const CodeEditor = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1 }}
-                className="mx-auto mt-6 rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-0.5 text-[#fff]"
+                className="mx-auto mt-6"
               >
-                Video Demo
+                <Link
+                  href={
+                    "https://www.loom.com/share/6c306af48bbb4ce4bd91dd43f896f7e5"
+                  }
+                  target="_blank"
+                  className="rounded-2xl bg-gradient-to-br from-blue-secondary to-blue-primary px-4 py-[4.5px] text-[#fff]"
+                >
+                  Video Demo
+                </Link>
               </motion.button>
             </div>
           </div>

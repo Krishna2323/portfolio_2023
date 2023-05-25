@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import * as IoIcons from "react-icons/io";
 
 type Props = {
   children: React.ReactNode;
@@ -28,8 +29,16 @@ const Modal: React.FC<Props> = (props) => {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className="absolute left-1/2 top-1/2 flex h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 flex-col items-center overflow-auto rounded-2xl border-t-[4px] border-blue-secondary bg-bg-primary px-10 py-8 shadow-2xl max-lg:h-[80%] max-lg:w-[80%] max-md:px-4 max-sm:h-[85%] max-sm:w-[85%]"
+          className="absolute left-1/2 top-1/2 flex h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 flex-col items-center overflow-auto rounded-2xl border-t-[6px] border-blue-secondary bg-bg-primary px-10 py-8 shadow-2xl max-lg:h-[80%] max-lg:w-[80%] max-md:px-4 max-sm:h-[85%] max-sm:w-[85%]"
         >
+          <div className="absolute right-[2%] top-[1.5%]">
+            <IoIcons.IoMdClose
+              onClick={() => setOpen(false)}
+              width={48}
+              height={48}
+              className="cursor-pointer"
+            />
+          </div>
           {props.children}
         </div>
       </motion.div>
