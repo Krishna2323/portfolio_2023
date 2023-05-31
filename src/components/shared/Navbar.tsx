@@ -47,7 +47,7 @@ const Navbar = () => {
           whileTap={{ scale: 1 }}
           className="btn-secondary flex h-10 w-10 items-center justify-center rounded-full p-2 text-[#fff]  shadow-primary"
         >
-          <a href={"mailto: belivethatkg@gmail.com"} target="_blank">
+          <a href={"https://github.com/Krishna2323"} target="_blank">
             <Image
               src="https://img.icons8.com/3d-fluency/94/null/github.png"
               alt="Github logo"
