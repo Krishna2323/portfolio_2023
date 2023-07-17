@@ -39,13 +39,13 @@
     #ff0000
   );
   position: absolute;
-  top: -2.5px;
-  left: -2.5px;
+  top: -1.5px;
+  left: -1.5px;
   background-size: 400%;
   z-index: -1;
-  filter: blur(3px);
-  width: calc(100% + 5px);
-  height: calc(100% + 5px);
+  filter: blur(0px);
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
   animation: glowing 30s linear infinite;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

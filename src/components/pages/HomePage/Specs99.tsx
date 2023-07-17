@@ -71,13 +71,13 @@ const Specs99 = () => {
   }, [currentImageIndex, imagesUrl]);
 
   return (
-    <div className="mt-14 flex w-full flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <div ref={ref} className="w-full rounded-2xl py-8 pt-2">
-        <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-4xl text-transparent max-sm:text-3xl">
+        <h2 className="mb-14 bg-gradient-to-br from-black-secondary to-black-primary bg-clip-text text-center text-3xl text-transparent max-[900px]:text-2xl max-sm:text-2xl">
           The Complete E-Commerce App With MERN
         </h2>
         <motion.div
-          className="glow-on-hover relative mx-auto h-[max(45vh,45vw)] w-[max(80vh,80vw)] skew-x-3 skew-y-3 rounded-xl max-xl:w-full max-md:h-[max(30vh,30vw)]"
+          className="glow-on-hover relative mx-auto h-[max(25vh,25vw)] w-full skew-x-3 skew-y-3 rounded-xl max-xl:w-full max-[900px]:h-[max(45vh,45vw)]"
           initial={false}
           animate={animateEditor ? "open" : "closed"}
           variants={variants}
@@ -100,7 +100,7 @@ const Specs99 = () => {
                 width={1200}
                 height={1000}
                 alt="Code editor by Krishna"
-                className="mx-auto h-full w-full rounded-xl"
+                className="mx-auto h-full w-full rounded-xl object-cover"
               />
             </div>
           ))}
